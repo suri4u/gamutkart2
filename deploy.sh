@@ -1,14 +1,14 @@
-#!/bin/bash
-##
-##
-ENVIRONMENT=$1
-if [ $ENVIRONMENT = "QA" ];then
-	sshpass -p "gamut" scp target/gamutkart.war gamut@172.17.0.2:/home/gamut/Distros/apache-tomcat-8.5.23/webapps
-	sshpass -p "gamut" ssh gamut@172.17.0.2 "JAVA_HOME=/home/gamut/Distros/jdk1.8.0_151" "/home/gamut/Distros/apache-tomcat-8.5.23/bin/startup.sh"
+if [ $PARAMETER = "QA" ];then
+sshpass -p 'suri' scp target/gamutkart.war suri@172.17.0.3:/home/suri/server1/distros/apache-tomcat-8.5.37/webapps
+sshpass -p "suri" ssh suri@172.17.0.3 "JAVA_HOME=/home/suri/server1/distros/jdk1.8.0_201" "/home/suri/server1/distros/apache-tomcat-8.5.37/bin/startup.sh"
+elif  [ $PARAMETER = "SIT" ];then
+sshpass -p 'suri' scp target/gamutkart.war suri@172.17.0.3:/home/suri/server1/distros/apache-tomcat-8.5.37/webapps
+sshpass -p "suri" ssh suri@172.17.0.3 "JAVA_HOME=/home/suri/server1/distros/jdk1.8.0_201" "/home/suri/server1/distros/apache-tomcat-8.5.37/bin/startup.sh"
+echo "welcome to project"
+elif [ $PARAMETER = "UAT" ];then
+sshpass -p 'suri' scp target/gamutkart.war suri@172.17.0.3:/home/suri/server1/distros/apache-tomcat-8.5.37/webapps
+sshpass -p "suri" ssh suri@172.17.0.3 "JAVA_HOME=/home/suri/server1/distros/jdk1.8.0_201" "/home/suri/server1/distros/apache-tomcat-8.5.37/bin/startup.sh"
 
-elif  [ $ENVIRONMENT = "SIT" ];then
-	sshpass -p "gamut" scp target/gamutkart.war gamut@172.17.0.3:/home/gamut/Distros/apache-tomcat-8.5.23/webapps
-	sshpass -p "gamut" ssh gamut@172.17.0.3 "JAVA_HOME=/home/gamut/Distros/jdk1.8.0_151" "/home/gamut/Distros/apache-tomcat-8.5.23/bin/startup.sh"
-echo "deployment has been done!"
+sshpass -p 'suri' scp target/gamutkart.war suri@172.17.0.4:/home/suri/server2/distros/apache-tomcat-8.5.37/webapps
+sshpass -p "suri" ssh suri@172.17.0.4 "JAVA_HOME=/home/suri/server2/distros/jdk1.8.0_201" "/home/suri/server2/distros/apache-tomcat-8.5.37/bin/startup.sh"
 fi
-
