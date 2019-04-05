@@ -13,7 +13,7 @@ pipeline {
 		}
 		stage('Deployment') {
 			steps {
-				sh 'echo deployment is succussful!'
+				sh 'sshpass -p "suri" scp /home/suri/.jenkins/workspace/pipe-line/target/gamutkart.war root@172.17.0.2:/home'
 			}
 		}
 
