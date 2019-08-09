@@ -21,11 +21,33 @@
 			<version>3.1.0</version>
 		</dependency>
 			
-	</dependencies>
+	</dependencies><distributionManagement>
+  <repository>
+    <id>repo</id>
+    <!-- CHANGE HERE by your team nexus server -->
+    <url>http://18.232.85.131:8080/nexus/content/repositories/repo/</url>
+  </repository>
+  <snapshotRepository>
+    <id>repoR</id>
+    <!-- CHANGE HERE by your team nexus server -->
+    <url>http://18.232.85.131:8080/nexus/content/repositories/repoR/</url>
+  </snapshotRepository>
+</distributionManagement>
 
 	<build>
 		<finalName>gamutkart</finalName>
 	</build>
-	
+	<distributionManagement>
+  <repository>
+    <id>repo</id>
+    <!-- CHANGE HERE by your team nexus server -->
+    <url>http://18.232.85.131:8080/nexus/content/repositories/repo/</url>
+  </repository>
+  <snapshotRepository>
+    <id>repoR</id>
+    <!-- CHANGE HERE by your team nexus server -->
+    <url>http://18.232.85.131:8080/nexus/content/repositories/repoR/</url>
+  </snapshotRepository>
+</distributionManagement>
 </project>
 
